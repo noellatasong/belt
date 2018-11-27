@@ -28,7 +28,7 @@
 				<td>${signup.createdAt } </td>
 				<td>
 				<c:if test="${sessionScope.user == signup.user.id}">
-				<p><a href="/course/remove/${singleCourse.id}">remove</a></p>
+				<p>remove</p>
 				</c:if>
 				
 				 </td>

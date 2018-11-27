@@ -32,20 +32,15 @@
 				<c:if test="${course.users.size() == course.capacity}">
 				<p>Full</p>
 				</c:if>
-				
-				<%-- <c:if test="${course.user == course.user}"> --%> 
-				<c:if test="${sessionScope.user == course.user.id}"> 
+								
+				<c:if test="${course.user != course.user}">
+				<p>Already Added</p>
+				</c:if>
+								 
 				
 				<form action="/course/addcourse/${user.id}/${course.id}" method="post">
 				<input type="submit" value="ADD">
 				</form>
-				</c:if>
-				
-				<c:if test="${course.user == course.user}">
-				<p>Already Added</p>
-				</c:if>
-				<%-- </c:if> --%>
-				
 				
 				 
 				

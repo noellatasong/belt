@@ -72,6 +72,7 @@ public class UserController {
 		if(password.length() < 8) {
 			model.addAttribute("loginError", "Invalid Credentials");
 			model.addAttribute("user", new User());
+			System.out.println("hello");
 			return "index.jsp";
 		}
 		
@@ -105,6 +106,7 @@ public class UserController {
 			model.addAttribute("user", u);
 			model.addAttribute("courses", courseService.findAll());
 			model.addAttribute("signups", signupService.findAll());
+			System.out.println("hello");
 			return "dashboard.jsp";
 		}
 	}
